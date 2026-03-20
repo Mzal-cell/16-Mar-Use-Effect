@@ -15,20 +15,34 @@
     
 // 6. Always include a 404 route
 
-import { useNavigate } from "react-router";
+// import { useNavigate } from "react-router";
 
-function HomeButton() {
-    const navigate = useNavigate();
+// function HomeButton() {
+//     const navigate = useNavigate();
 
-    function goHome() {
-        navigate("/hoome")
-    }
+//     function goHome() {
+//         navigate("/hoome")
+//     }
 
+//     return (
+//         <button onClick={goHome}>
+//             Go Home
+//         </button>
+//     )
+// }
+
+// export default HomeButton;
+
+import { Link } from "react-router-dom";
+
+export default function Navbar() {
     return (
-        <button onClick={goHome}>
-            Go Home
-        </button>
+        <nav>
+            <ul>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/about">About</Link></li>
+                <li><Link to="/products">Products</Link></li>
+            </ul>
+        </nav>
     )
 }
-
-export default HomeButton;
